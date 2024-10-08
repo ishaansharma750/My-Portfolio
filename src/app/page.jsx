@@ -7,7 +7,7 @@ const HomePage = () => {
 	return (
 		<div className='h-[calc(100vh-6rem)] flex flex-col lg:flex-row md:flex-row px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20'>
 			{/* image cointainer */}
-			<din className='h-1/2 lg:w-1/2 lg:h-full md:h-full md:w-1/3 relative'>
+			<din className='h-1/2 lg:w-1/2 lg:h-full md:h-full md:w-2/3 relative'>
 				<Image
 					src='/hero.png'
 					alt='hero image'
@@ -34,7 +34,7 @@ const HomePage = () => {
 				</h1>
 
 				{/* DESCRIPTION */}
-				<p className='my-6 md:text-xl'>
+				<p className='my-4 md:text-l'>
 					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
 					dolorem officiis quas neque praesentium, cupiditate commodi? Beatae,
 					sit vitae! Nobis distinctio magni amet illum. Quod, autem! Ex fugiat
@@ -43,9 +43,9 @@ const HomePage = () => {
 				</p>
 
 				{/* BUTTONS */}
-				<div className='flex gap-4'>
+				<div className='w-full flex gap-4'>
 					<button className='p-2 rounded-lg ring-1 ring-black bg-black text-white'>
-						View my Work
+						View My Work
 					</button>
 					<button className='p-2 rounded-lg ring-1 ring-black'>
 						Contact Me
