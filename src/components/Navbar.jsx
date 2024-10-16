@@ -9,23 +9,28 @@ import {
 	listItemVarients,
 	listVarients,
 	topVarients,
-} from './Animations';
+	links,
+	socialLinks,
+} from '../appConstants';
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<div className='w-full h-full flex items-center justify-between px-2 sm:px-8 md:px-10 lg:px-20 xl:px-0'>
+		<div className='h-full flex items-center justify-between px-2 sm:px-8 md:px-10 lg:px-20 xl:px-0 text-xl'>
 			{/* Links */}
 			<div className='hidden md:flex xl:gap-4 xl:w-1/3 text-lg items-center justify-center'>
-				<NavLink url='/' className='mx-2' title='Home' line={true} />
-				<NavLink url='/about' className='mx-2' title='About' line={true} />
-				<NavLink
-					url='/portfolio'
-					className='mx-2'
-					title='Portfolio'
-					line={true}
-				/>
-				<NavLink url='/contact' className='mx-2' title='Contact' line={true} />
+				{links.map((link) => {
+					return (
+						<NavLink
+							key={link.title}
+							url={link.url}
+							title={link.title}
+							line={true}
+							src={link.url}
+							alt={link.title}
+						/>
+					);
+				})}
 			</div>
 
 			{/* logo */}
@@ -41,19 +46,24 @@ const Navbar = () => {
 			</div>
 
 			{/* social */}
-			<div className=' hidden md:flex xl:w-1/3 xl:gap-10 md:gap-6 items-center justify-center'>
-				<motion.div whileHover={{ y: -2 }} className=''>
-					<NavLink src='/github.png' alt='Github' line={false} />
-				</motion.div>
-				<motion.div whileHover={{ y: -2 }} className=''>
-					<NavLink src='/facebook.png' alt='Github' line={false} />
-				</motion.div>
-				<motion.div whileHover={{ y: -2 }} className=''>
-					<NavLink src='/instagram.png' alt='Github' line={false} />
-				</motion.div>
-				<motion.div whileHover={{ y: -2 }} className=''>
-					<NavLink src='/linkedin.png' alt='Github' line={false} />
-				</motion.div>
+			<div className=' hidden md:flex xl:w-1/3 xl:gap-6 md:gap-6 items-center justify-center'>
+				{socialLinks.map((link) => (
+					<motion.div
+						key={link.title}
+						whileHover={{ y: -2 }}
+						whileTap={{ scale: 0.9 }}
+						className=''>
+						<NavLink
+							className='flex gap-4'
+							key={link.title}
+							socialLink={link.socialLink}
+							title={link.title}
+							line={false}
+							src={link.url}
+							alt={link.title}
+						/>
+					</motion.div>
+				))}
 			</div>
 
 			{/* Responsive menu */}

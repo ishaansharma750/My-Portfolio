@@ -1,16 +1,15 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const NavLink = ({ url, title, line, src, alt }) => {
-	const router = useRouter();
+const NavLink = ({ url, title, line, src, alt, socialLink ="" }) => {
 	const pathName = usePathname();
 	return (
 		<>
 			{line ? (
-				<Link className={'mx-4 relative group'} href={url}>
+				<Link className={'mx-2 relative group'} href={url}>
 					{title}
 					<span
 						className={`h-[2px] inline-block w-0 bg-black absolute bottom-0.5 left-0 group-hover:w-full transition-[width] ease duration-200 ${
@@ -20,8 +19,8 @@ const NavLink = ({ url, title, line, src, alt }) => {
 					</span>
 				</Link>
 			) : (
-				<Link href='#'>
-					<Image src={src} alt={alt} width={35} height={35} />
+				<Link href={socialLink} target='_blank' rel='noopener noreferrer'>
+					<Image src={src} alt={alt} width={25} height={25} />
 				</Link>
 			)}
 		</>
