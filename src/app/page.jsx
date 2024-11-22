@@ -35,13 +35,13 @@ const HomePage = () => {
 							sequence={['Suansh Budhiraja', 1000, 'Frontend Developer', 1000]}
 							wrapper='span'
 							speed={40}
-							style={{ fontSize: '3rem', display: 'inline-block'}}
+							style={{ fontSize: '3rem', display: 'inline-block' }}
 							repeat={Infinity}
 						/>
 					</h1>
 
 					{/* DESCRIPTION */}
-					<p className='my-3 font-semibold md:text-xl'>
+					<p className='my-3 md:text-xl'>
 						As a skilled frontend developer, I am dedicated to turning ideas
 						into innovative web applications. I invite you to explore my latest
 						projects that showcase my expertise in React.js and web development.

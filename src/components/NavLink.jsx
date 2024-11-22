@@ -4,7 +4,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const NavLink = ({ url, title, line, src, alt, socialLink ="" }) => {
+const NavLink = ({
+	url,
+	title,
+	line,
+	src,
+	alt,
+	socialLink = '',
+	width = 25,
+	height = 25,
+}) => {
 	const pathName = usePathname();
 	return (
 		<>
@@ -20,7 +29,7 @@ const NavLink = ({ url, title, line, src, alt, socialLink ="" }) => {
 				</Link>
 			) : (
 				<Link href={socialLink} target='_blank' rel='noopener noreferrer'>
-					<Image src={src} alt={alt} width={25} height={25} />
+					<Image src={src} alt={alt} width={width} height={height} />
 				</Link>
 			)}
 		</>

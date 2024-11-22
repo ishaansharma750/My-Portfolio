@@ -13,7 +13,7 @@ const singleQuote = {
 
 const AnimatedText = ({ text, classname = '' }) => {
 	return (
-		<div className='w-full mx-auto py-2 flex items-center justify-center text-center md:text-3xl sm:text-2xl'>
+		<div className='w-auto py-1 ml-18 flex items-center justify-start text-left md:text-4xl sm:text-3xl'>
 			<motion.h1
 				variants={quote}
 				initial='initial'
