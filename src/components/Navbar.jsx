@@ -35,24 +35,16 @@ const Navbar = () => {
 
 			{/* logo */}
 			<div className='md:hidden xl:justify-center lg:flex xl:w-1/3'>
-				<Link
-					href='/'
-					className='text-sm bg-black rounded-md p-2 font-semibold flex items-center justify-center'>
+				<Link href='/' className='text-sm bg-black rounded-md p-2 font-semibold flex items-center justify-center'>
 					<span className='text-white mr-1'>Suansh </span>
-					<span className='w-22 h-8 rounded text-black p-0.5 bg-white flex items-center justify-center'>
-						Budhiraja
-					</span>
+					<span className='w-22 h-8 rounded text-black p-0.5 bg-white flex items-center justify-center'>Budhiraja</span>
 				</Link>
 			</div>
 
 			{/* social */}
 			<div className=' hidden md:flex xl:w-1/3 xl:gap-6 md:gap-6 items-center justify-center'>
 				{socialLinks.map((link) => (
-					<motion.div
-						key={link.title}
-						whileHover={{ y: -2 }}
-						whileTap={{ scale: 0.9 }}
-						className=''>
+					<motion.div key={link.title} whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className=''>
 						<NavLink
 							className='flex gap-4'
 							key={link.title}

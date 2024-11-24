@@ -5,20 +5,19 @@ import { TypeAnimation } from 'react-type-animation';
 import { LinkArrow } from '../../public/icons';
 import { motion } from 'framer-motion';
 
-const HomePage = () => {
+const Homepage = () => {
 	return (
 		<motion.div className='h-full' initial={{ y: '-200vh' }} animate={{ y: '0%' }} transition={{ duration: 1 }}>
-			<div className='h-full flex flex-col lg:flex-row md:flex-row px-4 sm:px-8 md:px-10 lg:px-16 xl:px-20'>
-				{/* image cointainer */}
-				<din className='h-1/2 lg:w-1/2 lg:h-full md:h-full md:w-2/3 relative'>
-					<Image src='/hero.png' alt='hero image' fill className='object-contain' />
-				</din>
-
-				{/* text cointainer */}
-				<din className='h-1/2 lg:w-1/2 lg:full md:h-full md:w-2/3 flex flex-col gap-2 justify-center '>
+			<div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+				{/* IMAGE CONTAINER */}
+				<div className='h-1/2 lg:h-full lg:w-1/2 relative'>
+					<Image src='/hero.png' alt='' fill className='object-contain' />
+				</div>
+				{/* TEXT CONTAINER */}
+				<div className='h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center'>
 					{/* TITLE */}
-					<h1 className='text-2xl font-bold sm:text-2xl md:text-4xl lg:text-6xl'>
-						<span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-yellow-600 text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-start'>
+					<h1 className='text-3xl font-bold md:text-4xl lg:text-6xl text-center lg:text-left'>
+						<span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-yellow-600 text-3xl my-8 font-bold md:text-5xl lg:text-6xl text-start'>
 							Hello, I am
 						</span>
 						<br />
@@ -27,22 +26,19 @@ const HomePage = () => {
 							wrapper='span'
 							speed={40}
 							style={{
-								// fontSize: '2rem', // Default for smaller screens
+								fontSize: '2.5rem', // Adjust font size for smaller screens
 								display: 'inline-block',
 							}}
-							className='sm:text-2xl md:text-3xl lg:text-5xl' // Adjust size for different screen sizes
 							repeat={Infinity}
 						/>
 					</h1>
-
-					{/* DESCRIPTION */}
-					<p className='my-3 md:text-xl'>
+					{/* DESC */}
+					<p className='md:text-xl'>
 						As a skilled frontend developer, I am dedicated to turning ideas into innovative web applications. I invite
 						you to explore my latest projects that showcase my expertise in React.js and web development. My passion for
 						creating seamless user experiences drives me to continuously learn and implement the latest technologies,
 						ensuring that every project not only meets but exceeds client expectations.
 					</p>
-
 					{/* BUTTONS */}
 					<div className='w-full flex gap-4'>
 						<Link
@@ -58,10 +54,10 @@ const HomePage = () => {
 							Contact Me
 						</Link>
 					</div>
-				</din>
+				</div>
 			</div>
 		</motion.div>
 	);
 };
 
-export default HomePage;
+export default Homepage;

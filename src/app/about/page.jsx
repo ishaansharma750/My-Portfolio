@@ -19,11 +19,7 @@ const AboutPage = () => {
 	// const isExperienceRefInView = useInView(experienceRef, { margin: '-100px' });
 
 	return (
-		<motion.div
-			className='h-full'
-			initial={{ y: '-200vh' }}
-			animate={{ y: '0%' }}
-			transition={{ duration: 1 }}>
+		<motion.div className='h-full' initial={{ y: '-200vh' }} animate={{ y: '0%' }} transition={{ duration: 1 }}>
 			{/* CONTAINER */}
 			<div className='h-full overflow-scroll lg:flex ' ref={containerRef}>
 				{/* TEXT CONTAINER */}
@@ -41,23 +37,18 @@ const AboutPage = () => {
 						<h1 className='font-bold text-2xl'>BIOGRAPHY</h1>
 						{/* BIOGRAPHY DESC */}
 						<p className='text-lg'>
-							Hi, I'm Suansh Budhiraja, a passionate Frontend Developer with
-							backend knowledge, dedicated to crafting responsive, dynamic, and
-							user-centric web experiences. With expertise in React.js, Tailwind
-							CSS, Material-UI, I combine design with functionality to bring
-							seamless digital experiences to life.
+							Hi, I&apos;m Suansh Budhiraja, a passionate Frontend Developer with backend knowledge, dedicated to
+							crafting responsive, dynamic, and user-centric web experiences. With expertise in React.js, Tailwind CSS,
+							Material-UI, I combine design with functionality to bring seamless digital experiences to life.
 						</p>
 						<p className='text-lg'>
-							I believe that design is about more than just making things look
-							pretty – it's about solving problems and creating intuitive,
-							enjoyable experiences for users
+							I believe that design is about more than just making things look pretty &ndash; it&apos;s about solving
+							problems and creating intuitive, enjoyable experiences for users.
 						</p>
 						<p className='text-lg'>
-							Whether I'm working on a website, mobile app, or other digital
-							product, I bring my commitment to design excellence and
-							user-centered thinking to every project I work on. I look forward
-							to the opportunity to bring my skills and passion to your next
-							project.
+							Whether I&apos;m working on a website, mobile app, or other digital product, I bring my commitment to
+							design excellence and user-centered thinking to every project I work on. I look forward to the opportunity
+							to bring my skills and passion to your next project.
 						</p>
 						{/* BIOGRAPHY SCROLL SVG */}
 						<motion.svg
@@ -74,10 +65,7 @@ const AboutPage = () => {
 								stroke='#000000'
 								strokeWidth='1'></path>
 							<path d='M12 6V14' stroke='#000000' strokeWidth='1'></path>
-							<path
-								d='M15 11L12 14L9 11'
-								stroke='#000000'
-								strokeWidth='1'></path>
+							<path d='M15 11L12 14L9 11' stroke='#000000' strokeWidth='1'></path>
 						</motion.svg>
 					</div>
 					{/* SKILLS CONTAINER */}
@@ -96,9 +84,11 @@ const AboutPage = () => {
 							animate={isSkillRefInView ? { x: 0 } : {}}
 							className='flex gap-4 flex-wrap'>
 							<div className='flex gap-4 flex-wrap'>
-								{skills?.map((skill) => {
+								{skills?.map((skill, index) => {
 									return (
-										<div className='rounded p-2 text-md cursor-pointer bg-black text-white hover:bg-white hover:text-black'>
+										<div
+											key={index}
+											className='rounded p-2 text-md cursor-pointer bg-black text-white hover:bg-white hover:text-black'>
 											{skill}
 										</div>
 									);
@@ -120,17 +110,12 @@ const AboutPage = () => {
 								stroke='#000000'
 								strokeWidth='1'></path>
 							<path d='M12 6V14' stroke='#000000' strokeWidth='1'></path>
-							<path
-								d='M15 11L12 14L9 11'
-								stroke='#000000'
-								strokeWidth='1'></path>
+							<path d='M15 11L12 14L9 11' stroke='#000000' strokeWidth='1'></path>
 						</motion.svg>
 					</div>
 
 					{/* EXPERIENCE CONTAINER */}
-					<div
-						className='flex flex-col gap-6 justify-center pb-40'
-						ref={experienceRef}>
+					<div className='flex flex-col gap-6 justify-center pb-40' ref={experienceRef}>
 						{/* EXPERIENCE TITLE */}
 						<motion.h1
 							initial={{ x: '-300px' }}
@@ -140,41 +125,30 @@ const AboutPage = () => {
 							EXPERIENCE
 						</motion.h1>
 						{/* EXPERIENCE LIST */}
-						<motion.div
-							initial={{ x: '-300px' }}
-							animate={isExperienceRefInView ? { x: '0' } : {}}
-							className=''>
+						<motion.div initial={{ x: '-300px' }} animate={isExperienceRefInView ? { x: '0' } : {}} className=''>
 							{/* EXPERIENCE LIST ITEM */}
 							<div className='flex justify-center h-auto'>
 								{/* LEFT */}
 								<div className='w-6/12'>
 									{/* JOB TITLE */}
-									<div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>
-										Frontend Developer
-									</div>
+									<div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>Frontend Developer</div>
 									{/* JOB DESC */}
 									<div className='p-3 text-sm italic gap-2'>
 										<p>
-											Developed and maintained scalable web application using
-											MUI, Tailwind for styling, React for frontend, Nest.js for
-											backend, and MySQL for database management, enhanced user
-											interfaces and optimized application performance
+											Developed and maintained scalable web application using MUI, Tailwind for styling, React for
+											frontend, Nest.js for backend, and MySQL for database management, enhanced user interfaces and
+											optimized application performance
 										</p>
 										<br />
 										<p>
-											Designed and implemented UI components and services,
-											collaborating with cross-functional teams to ensure smooth
-											project delivery and adherence to business requirements
+											Designed and implemented UI components and services, collaborating with cross-functional teams to
+											ensure smooth project delivery and adherence to business requirements
 										</p>
 									</div>
 									{/* JOB DATE */}
-									<div className='p-3 text-red-400 text-sm font-semibold -mt-2'>
-										November 2023 - Present
-									</div>
+									<div className='p-3 text-red-400 text-sm font-semibold -mt-2'>November 2023 - Present</div>
 									{/* JOB COMPANY */}
-									<div className='p-2 ml-2 rounded bg-white text-sm font-semibold w-fit'>
-										Let's Notify
-									</div>
+									<div className='p-2 ml-2 rounded bg-white text-sm font-semibold w-fit'>Let&apos;s Notify</div>
 								</div>
 								{/* CENTER */}
 								<div className='w-1/12 flex justify-center '>
@@ -203,18 +177,13 @@ const AboutPage = () => {
 
 								<div className='w-6/12'>
 									{/* JOB TITLE */}
-									<div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>
-										Freelancer{' '}
-									</div>
+									<div className='bg-white p-3 font-semibold rounded-b-lg rounded-s-lg'>Freelancer </div>
 									{/* JOB DESC */}
 									<div className='p-3 text-sm italic gap-2'>
-										I provided web solutions, applying a range of technologies
-										to address client requirements.{' '}
+										I provided web solutions, applying a range of technologies to address client requirements.{' '}
 									</div>
 									{/* JOB DATE */}
-									<div className='p-3 text-red-400 text-sm font-semibold -mt-2'>
-										2023 - Present{' '}
-									</div>
+									<div className='p-3 text-red-400 text-sm font-semibold -mt-2'>2023 - Present </div>
 								</div>
 							</div>
 						</motion.div>

@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 export const Animations = ({ children }) => {
 	const pathName = usePathname();
 	return (
-		<AnimatePresence>
+		<AnimatePresence mode='wait'>
 			<div
 				key={pathName}
 				className='w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100'>
@@ -36,7 +36,6 @@ export const Animations = ({ children }) => {
 				</div>
 				<div className='h-[calc(100vh-6rem)]'>{children}</div>
 			</div>
-			//{' '}
 		</AnimatePresence>
 	);
 };
