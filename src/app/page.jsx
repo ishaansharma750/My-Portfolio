@@ -26,11 +26,8 @@ const HomePage = () => {
 							sequence={['Suansh Budhiraja', 1000, 'Frontend Developer', 1000]}
 							wrapper='span'
 							speed={40}
-							style={{
-								// fontSize: '2rem', // Default for smaller screens
-								display: 'inline-block',
-							}}
-							className='sm:text-2xl md:text-3xl lg:text-5xl' // Adjust size for different screen sizes
+							style={{ display: 'inline-block' }}
+							className='sm:text-2xl md:text-3xl lg:text-5xl'
 							repeat={Infinity}
 						/>
 					</h1>
