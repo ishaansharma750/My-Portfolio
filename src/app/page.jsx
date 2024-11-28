@@ -43,7 +43,7 @@ const HomePage = () => {
 					{/* BUTTONS */}
 					<div className='w-full flex gap-4'>
 						<Link
-							href='./Resume/Suansh_Budhiraja_.pdf'
+							href='./Resume/Suansh_Budhiraja.pdf'
 							target={'_blank'}
 							download={true}
 							className='flex items-center bg-black text-white p-2.5 px-4 rounded-lg text-lg font-semibold hover:text-black border-2 border-transparent hover:border-black hover:bg-transparent'>
