@@ -26,8 +26,11 @@ const HomePage = () => {
 							sequence={['Suansh Budhiraja', 1000, 'Frontend Developer', 1000]}
 							wrapper='span'
 							speed={40}
-							style={{ display: 'inline-block' }}
-							className='sm:text-2xl md:text-3xl lg:text-5xl'
+							style={{
+								// fontSize: '2rem', // Default for smaller screens
+								display: 'inline-block',
+							}}
+							className='sm:text-2xl md:text-3xl lg:text-5xl' // Adjust size for different screen sizes
 							repeat={Infinity}
 						/>
 					</h1>
@@ -43,7 +46,7 @@ const HomePage = () => {
 					{/* BUTTONS */}
 					<div className='w-full flex gap-4'>
 						<Link
-							href='./Resume/Suansh_Budhiraja_.pdf'
+							href='./Resume/Suansh_Budhiraja.pdf'
 							target={'_blank'}
 							download={true}
 							className='flex items-center bg-black text-white p-2.5 px-4 rounded-lg text-lg font-semibold hover:text-black border-2 border-transparent hover:border-black hover:bg-transparent'>
